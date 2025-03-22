@@ -295,12 +295,7 @@ public class ChargingControlController extends LineageHealthFeature {
 
     private void onPowerDisconnected() {
         if (mBattReceiver != null) {
-            try {
-                mContext.unregisterReceiver(mBattReceiver);
-            } catch (IllegalArgumentException e) {
-                Log.w(TAG, "Attempted to unregister receiver that was not registered");
-            }
-            mBattReceiver = null;
+            mContext.unregisterReceiver(mBattReceiver);
         }
 
         // On disconnected, reset internal state
