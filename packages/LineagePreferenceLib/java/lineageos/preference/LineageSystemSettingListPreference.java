@@ -11,7 +11,6 @@ import android.util.AttributeSet;
 
 import lineageos.providers.LineageSettings;
 
-
 public class LineageSystemSettingListPreference extends SelfRemovingListPreference {
 
     private boolean mAutoSummary = false;
