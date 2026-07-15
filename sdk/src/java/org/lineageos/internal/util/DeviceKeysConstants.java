@@ -35,7 +35,8 @@ public class DeviceKeysConstants {
         CLEAR_ALL_NOTIFICATIONS,
         NOTIFICATIONS,
         QS_PANEL,
-        AMBIENT_DISPLAY;
+        AMBIENT_DISPLAY,
+        SYSTEM_POPUP;
 
         public static Action fromIntSafe(int id) {
             if (id < NOTHING.ordinal() || id >= Action.values().length) {
