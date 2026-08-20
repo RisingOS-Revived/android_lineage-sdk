@@ -3520,6 +3520,17 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator TRUST_RESTRICT_USB_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 2);
+
+        /**
+         * Whether Google Play Services battery optimization (GMS Doze) is enabled
+         * 0 = disabled (default)
+         * 1 = enabled
+         * @hide
+         */
+        public static final String GMS_DOZE = "gms_doze";
+
+        /** @hide */
+        public static final Validator GMS_DOZE_VALIDATOR = sBooleanValidator;
         // endregion
 
         /**
@@ -3550,6 +3561,7 @@ public final class LineageSettings {
                 new ArrayMap<String, Validator>();
         static {
             VALIDATORS.put(TRUST_RESTRICT_USB, TRUST_RESTRICT_USB_VALIDATOR);
+            VALIDATORS.put(GMS_DOZE, GMS_DOZE_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
